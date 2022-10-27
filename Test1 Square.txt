@@ -1,0 +1,11 @@
+Code:
+
+fd 10 rt 90 fd 10 rt 90 fd 10 rt 90 fd 10 rt 90
+repeat 4 [fd 10 rt 90]
+
+
+Explanation:
+
+fd 10 rt 90
+
+Moves the turtle forward by 10 units then turns the turtle to the right

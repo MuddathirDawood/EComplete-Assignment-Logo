@@ -1,0 +1,15 @@
+Code:
+
+pu lt 90 fd 15 rt 90 bk 8 pd repeat 8 [fd 16 rt 45]
+
+
+Explanation:
+
+pu lt 90 fd 15 rt 90 bk 8 pd
+
+This part of the code was to move the turtle a little bit to the bottom left so that the full polygon can be seen
+
+repeat 8 [fd 16 rt 45]
+
+This creates an octogon with sides of 16 units
+

@@ -1,0 +1,75 @@
+Code: 
+
+square - to square :size repeat 4 [fd :size rt 90] end
+
+rectangle - to rectangle :w :l repeat 2 [fd :w rt 90 fd :l rt 90] end
+
+////////////////////////////////////// HEAD \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Eyes:
+to eyes filled "blue [square 28] 
+               pu setxy xcor + 10 ycor + 10 pd 
+               filled "yellow [square 8] 
+               pu sety ycor - 10 seth 90 fd 70 seth 0 pd 
+               filled "blue [square 28] 
+               pu setxy xcor + 10 ycor + 10 pd 
+               filled "yellow [square 8] end
+
+Mouthnose:
+to mouthnose pu setxy xcor - 65 ycor - 35 pd setwidth 2 bk 10 seth 90 fd 60 seth 0 fd 10 setwidth 1 pu setxy xcor - 36 ycor + 15 pd filled "red [square 10] end
+
+Ears:
+to ears pu setx xcor - 64 lt 90 pd filled "grey [rectangle 25 45] pu seth 90 fd 135 sety ycor + 45 pd filled "grey [rectangle 25 45] pu lt 90 fd 40 lt 90 fd 105 rt 90 pd filled "red [rectangle 45 16] pu setx xcor + 59 pd filled "red [rectangle 45 16] pu setx xcor + 8 fd 45 lt 90 pd filled "blue [arc 180 16] fd 16 bk 32 pu setx xcor - 75 pd filled "blue [arc 180 16] fd 16 bk 32 end
+
+Head:
+to head filled "silver [setwidth 2 square 135 setwidth 1] pu setxy xcor + 15 ycor + 60 pd eyes mouthnose ears end
+
+
+////////////////////////////////////// BODY \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Body:
+to body filled "silver [rectangle 190 165] pu setxy xcor +20 ycor + 20 pd filled "grey [rectangle 150 125] botplate topplate pu setxy xcor - 70 ycor - 65 pd rightarm pu setxy xcor + 170 ycor + 8 seth 0 pd leftarm end
+
+Botplate:
+to botplate filled 10 [rectangle 40 125] repeat 5 [filled 6 [rectangle 40 10] setx xcor + 15] pu setxy xcor + 10 ycor + 5 pd repeat 3 [filled "blue [square 10] setx xcor + 12] fd 30 lt 90 fd 2 lt 90 repeat 3 [filled "blue [square 10] setx xcor - 12] fd 30 lt 90 fd 2 pu setxy xcor - 85 ycor - 5 pd seth 0 end
+
+Topplate:
+to topplate fd 80 filled 14 [rectangle 70 125] pu setxy xcor + 90 ycor + 35 pd heart pu setxy xcor - 75 ycor - 15 pd filled "grey [square 30] end
+
+Heart:
+to heart filled 3 [arc 360 50] setpencolor "red setwidth 2 repeat 10 [repeat 8 [fd 18 rt 45] rt 36] setwidth 1 setpencolor "black end
+
+Rightarm:
+to rightarm filled "silver [rectangle 100 30] fd 50 pu setx xcor + 15 pd filled "grey [arc 360 15] pu setxy xcor + 15 ycor + 50 pd lt 90 bk 20 filled "grey [rectangle 60 40] fd 15 pu sety ycor - 100 pd lt 90 filled "blue [rectangle 8 40] fd 8 filled "grey [rectangle 30 40] end
+
+Leftarm:
+to leftarm filled "silver [rectangle 100 30] fd 50 pu setx xcor + 15 pd filled "grey [arc 360 15] pu setxy xcor + 15 ycor + 50 pd rt 90 bk 20 filled "grey [rectangle 60 40] fd 15 pu sety ycor - 100 pd rt 90 filled "blue [rectangle 8 40] fd 8 filled "grey [rectangle 30 40] end
+
+
+////////////////////////////////////// LEGS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Rightleg:
+to rightleg
+  filled "silver [ rectangle 100 40 ] fd 30 filled "grey [ square 40 ] fd 40 repeat 10 [ filled "blue [ rectangle 30 4 ] setx xcor + 4 ] pu setxy xcor - 25 ycor - 70 pd filled "black [ rectangle 30 20 ] rt 90 fd 25 rt 90 filled "grey [ rectangle 25 55 ] arc 90 25 arc 90 5 pu rt 45 fd 10 pd setcolor "black fill bk 10 seth 270 fd 55 filled "grey [ lt 60 fd 28.5 seth 90 fd 15 ]
+end
+
+Leftleg: 
+to leftleg
+  filled "silver [ rectangle 100 40 ] fd 30 filled "grey [ square 40 ] fd 40 repeat 10 [ filled "blue [ rectangle 30 4 ] setx xcor + 4 ] pu setxy xcor - 25 ycor - 70 pd filled "black [ rectangle 30 20 ] rt 90 fd 25 rt 90 filled "grey [ rectangle 25 55 ] arc 90 25 arc 90 5 pu rt 45 fd 10 pd setcolor "black fill bk 10 seth 270 fd 55 filled "grey [ lt 60 fd 28.5 seth 90 fd 15 ]
+end
+
+
+////////////////////////////////////// ROBOT \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Robot:
+to robot cs print "My_Name_Is_Muddathir_Dawood pu sety 99 pd head pu setxy xcor - 69 ycor - 370 seth 0 pd body pu setxy xcor - 170 ycor - 148 seth 0 pd rightleg pu setxy xcor + 70 ycor + 25 seth 0 pd leftleg end
+
+
+
+
+EXPLANATION:
+I made the Square and Rectangle procedures to generate the corresponding shape according to how big I want it
+
+Most/All of the setx/sety/setxy I used was to position the turtle elsewhere without turning it and forwarding it
+
+I used filled to colour all my shapes

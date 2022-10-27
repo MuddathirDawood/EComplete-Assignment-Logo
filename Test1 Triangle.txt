@@ -1,0 +1,10 @@
+Code:
+
+fd 12 rt 120 fd 12 rt 120 fd 12 rt 120
+repeat 3 [fd 12 rt 120]
+
+Explanation:
+
+fd 12 rt 120
+
+Moves the turtle forward by 12 units then turns the turtle by 120 deg which makes and equilateral triangle
