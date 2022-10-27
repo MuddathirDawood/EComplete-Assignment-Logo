@@ -43,7 +43,7 @@ Rightarm:
 to rightarm filled "silver [rectangle 100 30] fd 50 pu setx xcor + 15 pd filled "grey [arc 360 15] pu setxy xcor + 15 ycor + 50 pd lt 90 bk 20 filled "grey [rectangle 60 40] fd 15 pu sety ycor - 100 pd lt 90 filled "blue [rectangle 8 40] fd 8 filled "grey [rectangle 30 40] end
 
 Leftarm:
-to leftarm filled "silver [rectangle 100 30] fd 50 pu setx xcor + 15 pd filled "grey [arc 360 15] pu setxy xcor + 15 ycor + 50 pd rt 90 bk 20 filled "grey [rectangle 60 40] fd 15 pu sety ycor - 100 pd rt 90 filled "blue [rectangle 8 40] fd 8 filled "grey [rectangle 30 40] end
+to leftarm filled "silver [ rectangle 100 30 ] fd 50 pu setx xcor + 15 pd filled "grey [ arc 360 15 ] pu setxy xcor - 15 ycor + 90 pd rt 90 bk 20 filled "grey [ rectangle 60 40 ] fd 15 pu setxy xcor + 40 ycor - 140 pd rt 90 filled "blue [ rectangle 8 40 ] fd 8 filled "grey [ rectangle 30 40 ] end
 
 
 ////////////////////////////////////// LEGS \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -55,7 +55,7 @@ end
 
 Leftleg: 
 to leftleg
-  filled "silver [ rectangle 100 40 ] fd 30 filled "grey [ square 40 ] fd 40 repeat 10 [ filled "blue [ rectangle 30 4 ] setx xcor + 4 ] pu setxy xcor - 25 ycor - 70 pd filled "black [ rectangle 30 20 ] rt 90 fd 25 rt 90 filled "grey [ rectangle 25 55 ] arc 90 25 arc 90 5 pu rt 45 fd 10 pd setcolor "black fill bk 10 seth 270 fd 55 filled "grey [ lt 60 fd 28.5 seth 90 fd 15 ]
+  filled "silver [ rectangle 100 40 ] fd 30 filled "grey [ square 40 ] fd 40 repeat 10 [ filled "blue [ rectangle 30 4 ] setx xcor + 4 ] pu setxy xcor - 35 ycor - 70 pd filled "black [ rectangle 30 20 ] lt 90 fd 5 rt 90 pu bk 25 pd filled "grey [ rectangle 25 55 ] pu fd 25 pd rt 90 arc 90 25 arc 90 5 pu rt 45 fd 10 pd setcolor "black fill bk 10 seth 90 fd 55 filled "grey [ rt 60 fd 28.5 seth 270 fd 15 ]
 end
 
 
